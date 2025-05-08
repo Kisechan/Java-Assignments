@@ -23,7 +23,7 @@ class SalarySystem {
         for (Employee employee : employees) {
             if (employee.id.equals(employeeId)) {
                 System.out.println("您本月工资明细如下");
-                employee.displaySalaryDetails();
+                System.out.println(employee.getSalaryDetails());
                 return;
             }
         }

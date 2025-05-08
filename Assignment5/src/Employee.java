@@ -13,10 +13,10 @@ abstract class Employee {
 
     abstract double calculateSalary();
 
-    public void displaySalaryDetails() {
+    public String getSalaryDetails() {
         double grossSalary = calculateSalary();
         double deduction = absenceHours * 50;
         double netSalary = grossSalary - deduction;
-        System.out.println("Id：" + id + "，姓名：" + name + "，应发工资：" + String.format("%.1f", grossSalary) + "元，缺勤" + String.format("%.1f", absenceHours) + "小时，扣款：" + String.format("%.1f", deduction) + "元，实发工资：" + String.format("%.1f", netSalary) + "元");
+        return "Id：" + id + "，姓名：" + name + "，应发工资：" + String.format("%.1f", grossSalary) + "元，缺勤" + String.format("%.1f", absenceHours) + "小时，扣款：" + String.format("%.1f", deduction) + "元，实发工资：" + String.format("%.1f", netSalary) + "元";
     }
 }
